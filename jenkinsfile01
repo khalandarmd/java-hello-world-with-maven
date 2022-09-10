@@ -3,7 +3,7 @@ pipeline {
 		stages {
                 stage('git_checkout') {
 		   steps {
-                   git branch: 'main', credentialsId: 'Lnt_git_credential', url: 'https://github.com/vidya-1995/java-hello-world-with-maven.git'
+                   checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_cred', url: 'https://github.com/vidya-1995/java-hello-world-with-maven.git']]])
 			}
 		}
       stage('Build') {
