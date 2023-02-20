@@ -16,8 +16,8 @@ pipeline{
     }
     stage('Deploy to Container'){
       steps{
-        deploy contextPath: 'http://13.232.122.220:8080/', war: '"**/jb-hello-world-maven-0.2.0.jar"'
-      }
+      deploy contextPath: 'http://13.232.122.220:8080', war: '**/*jb-hello-world-maven-0.2.0.jar'
+}
     }
   }
 }
