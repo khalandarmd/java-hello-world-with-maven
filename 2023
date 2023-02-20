@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Checkout'){
       steps{
-        git branch: 'main', credentialsId: 'GitHub-Cred-2023', url: 'https://github.com/khalandarmd/javawebapp.git'
+        git credentialsId: 'GitHub-Cred-2023', url: 'https://github.com/khalandarmd/java-hello-world-with-maven.git'
       }
     }
     stage('Build'){
